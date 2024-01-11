@@ -1,0 +1,8 @@
+locustfile: test/loadtest.py
+host: http://127.0.0.1:62300
+master: true
+expect-workers: 4
+users: 500
+spawn-rate: 10
+headless: false
+run-time: 180s

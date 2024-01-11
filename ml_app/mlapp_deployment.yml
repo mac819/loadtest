@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ml-app-deployment
+  labels:
+    app: ml_app
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: ml_app
+  template:
+    metadata:
+      labels:
+        app: ml_app
+    spec:
+      containers:
+      - name: iris-model
+        image: docker.io/flask/ml_app:1.1
+        ports:
+        - containerPort: 5000

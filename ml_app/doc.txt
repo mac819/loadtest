@@ -1,0 +1,20 @@
+# Install Python InfluxDbClient
+pip install influxdb
+
+# Run influx DB docker image
+docker pull influxdb
+docker run -p 8086:8086 -v $PWD:/var/lib/influxdb influxdb
+
+# Connect to influx DB container
+docker ps
+docker exec -it <container_name> sh
+influx
+
+# Influc Token
+5ctA6xo8kQ2W1_4Jq1FEYrnaMVmhMPP3Afr8AGxq5ZQoLZZmlhpot5Y4WXXuqBJPbaFKLlwgqeOTZI_zf6iaKQ==
+
+# InfluxDB User
+mayank
+
+# InfluxDB Password
+password123
